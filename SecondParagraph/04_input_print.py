@@ -17,3 +17,4 @@ num = input("请输入取款金额：")
 print(f"取款后余额为：{total-int(num)}")
 
 
+ 
