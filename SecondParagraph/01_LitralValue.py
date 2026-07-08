@@ -14,6 +14,12 @@ print(num4)
 print("----------")
 print(None)
 
-base,increase = 30.7,15.4#一次性定义多个变量
+base,increase = 30,15.4#一次性定义多个变量
 print("下个月总量：",base+increase)#print多项数据之间逗号分隔
 print("下下个月总量：",base+increase+increase)
+
+print(type(base)," ",type(increase))
+print(type(True)," ",type(None)," ",type("string"))
+print(isinstance(base,int)," ",isinstance(base,float))
+#type()内置函数，查看数据类型
+#isinstance()判定指定数据是不是指定类型
