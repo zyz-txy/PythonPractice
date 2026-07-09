@@ -7,12 +7,12 @@ else:
 """
 
 #遍历字符串
-# msg = input("请输入需要遍历的字符串：")
-#
-# for i in msg:
-#     print(f"元素：{i}")
-# else:
-#     print(f"循环结束时打印")
+msg = input("请输入需要遍历的字符串：")
+
+for i in msg:
+    print(f"元素：{i}")
+else:
+    print(f"循环结束时打印")
 
 #range
 """
