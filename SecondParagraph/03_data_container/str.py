@@ -9,7 +9,7 @@ for i in s:
     print(i)
 
 #不可变性：s[0] = o  --- X
-# 切片 - 同链表
+# 切片 - 同列表
 print(s[0:5:1])
 print(s[:5:1])
 print(s[:5:])
@@ -85,3 +85,12 @@ if flag:
     print(f"\"{s1}\"是回文字符串")
 else:
     print(f"\"{s1}\"不是回文字符串")
+
+#练习2------------------------------------
+list1 = []
+print("请输入十个字符串")
+for i in range(1,11):
+  list1.append((input(f"请输入第{i}个字符串：").upper())[::-1])
+#输入->大写->反转->写入（可拆解）
+for i in list1:
+    print(i)
