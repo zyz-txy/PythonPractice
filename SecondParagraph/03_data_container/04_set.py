@@ -8,7 +8,7 @@ s1 = {9,5,2,64,3,10,6,8,3,5}
 print(s1)
 print(type(s1))
 # #定义空集合
-s2  = {}
+s2  = {}# ---- X
 print(type(s2))
 s2 = set()
 print(type(s2))
