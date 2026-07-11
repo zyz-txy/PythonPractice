@@ -39,18 +39,18 @@ endswith() - 检查字符串是以指定子串结束，返回bool
 
 #案例1 - 邮箱格式
 #法一
-# mail = input("请输入邮箱：")
-#
-# if mail.count("@") == 1 and mail.find(".") >= 1:
-#     print(f"{mail}是一个合法的邮箱！")
-# else:
-#     print(f"{mail}不是一个合法的邮箱!")
+mail = input("请输入邮箱：")
+
+if mail.count("@") == 1 and mail.find(".") >= 1:
+    print(f"{mail}是一个合法的邮箱！")
+else:
+    print(f"{mail}不是一个合法的邮箱!")
 # #法二
-# #  in  用于判断指定的子字符串是否出现在字符串中，返回bool
-# if mail.count("@") == 1 and "." in mail:
-#     print(f"{mail}是一个合法的邮箱!")
-# else:
-#     print(f"{mail}不是一个合法的邮箱！")
+#  in  用于判断指定的子字符串是否出现在字符串中，返回bool
+if mail.count("@") == 1 and "." in mail:
+    print(f"{mail}是一个合法的邮箱!")
+else:
+    print(f"{mail}不是一个合法的邮箱！")
 
 #练习1：判断回文字符串
 #法一：遍历一半，运行速度更快---------------------------------
