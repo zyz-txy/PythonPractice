@@ -63,3 +63,18 @@ def add(a, b):
 print(add.__doc__)
 
 help(add)
+
+#函数嵌套
+
+def out_line_a():
+    print('a...before')
+    out_line_b()
+    print('a...after')
+def out_line_b():
+    print('b...before')
+    out_line_c()
+    print('b...after')
+def out_line_c():
+    print('c...')
+out_line_a()
+print("函数调用完毕！")
