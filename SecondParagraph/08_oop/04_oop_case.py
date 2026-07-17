@@ -97,23 +97,26 @@ class EduManagement:
             print("5. 显示全部学生成绩")
             print("6. 退出系统")
             choice = input("请输入你的选择（1-6）：")
-            #或者使用match case1
-            if choice == "1":
-                self.add_student()
-            elif choice == "2":
-                self.update_student()
-            elif choice == "3":
-                self.delete_student()
-            elif choice == "4":
-                self.query_student()
-            elif choice == "5":
-                self.list_student()
-            elif choice == "6":
-                print("感谢使用",self.system_name,"系统，再见！")
-                break
-            else:
-                print("输入不合理，请重新输入！")
-
+            try:    #或者使用match case1
+                if choice == "1":
+                    self.add_student()
+                elif choice == "2":
+                    self.update_student()
+                elif choice == "3":
+                    self.delete_student()
+                elif choice == "4":
+                    self.query_student()
+                elif choice == "5":
+                    self.list_student()
+                elif choice == "6":
+                    print("感谢使用",self.system_name,"系统，再见！")
+                    break
+                else:
+                    print("输入不合理，请重新输入！")
+            except ValueError:
+                print("输入不合理!请重新输入(1-6):")
+            except Exception:
+                print("输入不合理!请重新输入(1-6):")
 if __name__ =="__main__":
     edumgr = EduManagement()
     edumgr.run()
