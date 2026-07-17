@@ -61,7 +61,7 @@ class ShoppingCart:
     def run(self):
         print(
             f"欢迎使用{self.system_name}系统，版本号：{self.system_version}"
-            "\n1. 添加商品\n2. 修改商品\n3. 删除商品\n4. 列出商品\n5. 退出系统"
+
         )
         while True:
             print("1. 添加商品\t2. 修改商品\t3. 删除商品\t4. 列出商品\t5. 退出系统")
