@@ -1,0 +1,9 @@
+{
+  "name": "txy",
+  "age": 19,
+  "gender": "男",
+  "hobbies": [
+    "coding",
+    "gaming"
+  ]
+}
