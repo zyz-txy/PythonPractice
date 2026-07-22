@@ -14,6 +14,7 @@ AI大模型训练语料
 """
 
 import requests
+from lxml import html
 
 #定义url
 target_url = "https://www.tiobe.com/tiobe-index/"
@@ -22,4 +23,20 @@ target_url = "https://www.tiobe.com/tiobe-index/"
 response = requests.get(target_url)
 
 #输出数据到控制台
-print(response.text)
+#print(response.text)
+document = html.fromstring(response.text)
+
+#解析数据
+#在网页按下f12,选择network,选择xhr,选择tiobe-index,选择headers,选择response,选择xpath
+#解析表头
+#在网页按下f12，选择element,选中标签，右键copy xpath写法
+#th_list = document.xpath("//table[@id = 'top20']/thead/tr/th/text()")
+#th_list = document.xpath("//html/body/section/div/article/table[1]/thead/tr/th/text()")#copy all xpath
+th_list = document.xpath("//*[@id='top20']/thead/tr/th/text()")#copy xpath
+print(th_list)
+
+#解析表格中数据
+tr_list = document.xpath("//table[@id = 'top20']/tbody/tr")
+for tr in tr_list:
+    td_list = tr.xpath("./td/text()")
+    print(td_list)
