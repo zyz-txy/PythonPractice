@@ -205,8 +205,8 @@ async function loadSession(sessionId) {
         if (result.code === 200) {
             const sessionData = result.data;
             
-            // 更新状态
-            state.messages = sessionData.messages || [];
+            // 更新状态 (兼容旧版会话数据字段名 message / messages)
+            state.messages = sessionData.messages || sessionData.message || [];
             elements.sessionName.textContent = `会话名称: ${sessionId}`;
             
             // 渲染消息
